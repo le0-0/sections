@@ -1,0 +1,85 @@
+§ xml-comment
+§§? xml-comment__summary
+
+§ xml-comment__summary
+/// <summary>
+/// §§ Content
+/// <summary/>
+
+§ xml-comment__example
+
+§ some_function
+§§ 
+
+
+
+BEM block name
+§ description
+Human readable text representation of the concept
+§ text
+Text representation of the concept
+§ csharp
+Code representation of the concept
+
+xml-tag
+§ description
+A single tag in a XML document.
+§variant single-line
+§§ if content
+<§param tag /§>§param content /§</§param tag /§>
+§§ else
+<§§ tag /§§/>
+§§ end if
+
+<concept name="xml-tag">
+	<description>A single tag in a XML document.</description>
+	<single-line>
+§if content
+		<§param tag /§>§param content/§</§param tag /§>
+§else
+		<§param tag /§/>
+§end if
+	</single-line>
+	<multi-line>
+		<§param tag /§>
+			§{content?}
+		</§{tag}>
+	</multi-line>
+</concept>
+
+<concept name="xml-comment">
+	<description>A XML comment for C#.</description>
+	<code>
+		§§ if summary
+	</code>
+</concept>
+
+
+
+
+xml-comment
+§description
+A XML comment for C# classes, functions and fields.
+§csharp
+§§ if summary
+/// <summary>
+/// §§ summary
+/// <summary/>
+§§ end if
+§§ if remarks
+/// <remarks>
+/// §§ remarks
+/// <remarks/>
+§§ end if
+§§ if example
+/// <example>
+/// 
+§§ end if
+
+
+example
+§description
+Example of an concept with some code and references to other concepts.
+§csharp
+§§ xml-comment
+summary:
